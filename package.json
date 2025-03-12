@@ -1,19 +1,20 @@
 {
-  "name": "teste-node",
+  "name": "api-backend",
   "version": "1.0.0",
-  "description": "API Backend para o IFFinance",
-  "main": "index.js",
+  "description": "API Backend Exemplo de Aula",
+  "main": "src/server.js",
+  "type":"module",
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js"
   },
   "keywords": [
     "api",
-    "node",
     "express",
-    "mvc"
+    "exemplo",
+    "prisma"
   ],
-  "author": "Raissa",
+  "author": "Renan Cavichi",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2"

@@ -1,23 +1,15 @@
-const express = require('express') //importa o pacote express
-const app = express() //funçao express que retorna um objeto com um monte de funçoes que vai ser guardado no app
+//const express = require('express')
+import express from 'express'
+import userRouter from './routers/userRouter.js'
+import propertyRouter from './routers/propertyRouter.js'
+
+const app = express()
 const port = 3000
+app.use(express.json()) //faz o parse do json e transforma em objeto no req.body
 
-
-app.listen
-
-app.get('/', (req, res) => {
-  res.send('Olá Mundo!')
-})
-
-app.get('/user', (req, res) => {
-    res.send('Raissa Patricio')
-  })
-
-app.get('/product', (req, res) => {
-res.send('MELANCIA 100 REAIS O KG')
-})
-
+app.use('/user', userRouter)
+app.use('/property', propertyRouter)
 
 app.listen(port, () => {
-  console.log(`App de exemplo esta rodando na porta http://localhost:${port}`)
+    console.log('Servidor rodando em http://localhost:${port}')
 })
