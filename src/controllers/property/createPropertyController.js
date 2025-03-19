@@ -1,12 +1,10 @@
 export default function createPropertyController(req, res) {
+    const property = req.body
+
+    //TODO validar e inserir no BD
+
     return res.json({
-        message: "Imovel criado com sucesso!"
-        property: {
-            id: 1,
-            tipo: "Aluguel",
-            endereco: "Rua Coronel Aristides, 27",
-            quartos: 3,
-            propriedade: "Casa"
-}
-})
+        message: "Imovel criado com sucesso!",
+        property: property
+    })
 }

@@ -1,4 +1,4 @@
-export default function getPropertyController (req, res){
+export default function getPropertyController(req, res){
     return res.json({
         id: 1,
         tipo: "Aluguel",
@@ -7,4 +7,3 @@ export default function getPropertyController (req, res){
         propriedade: "Casa"
     })
 }
-
